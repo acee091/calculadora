@@ -1,6 +1,5 @@
 const inquirer = require('inquirer')
 const chalk = require('chalk')
-const { parse } = require('path')
 
 inicio()
 function inicio(){
@@ -38,11 +37,12 @@ function inicio(){
             }
             return valorTotal()
         })
+        
     }
- function valorTotal(amount, people){
-   gorjeta = amount + (amount * 0.10);
- valordividido = (amount + gorjeta) / parseInt(people);
-  console.log(`Cada pessoa tem que pagar: ${valordividido} ${gorjeta} ${amount} ${people}`)
+    function valorTotal(amount, people){
+    gorjeta = amount + (amount * 0.10);
+    valordividido = (amount + gorjeta) / people;
+    console.log(`Cada pessoa tem que pagar: ${valordividido}`)
 
    }
 }
